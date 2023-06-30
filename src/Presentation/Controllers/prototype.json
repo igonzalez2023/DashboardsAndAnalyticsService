@@ -1,0 +1,71 @@
+//{
+//  "Positions": [{
+//    "Id" : "23847169234",
+//    "Name": "PMO Manager",
+//    "Status" : [{
+//      "StatusId" :"21341234",
+//      "StatusName" : "0. L0- HR 1st contact candidate",
+//      "CountOfStatus" : 7
+//    },{
+//      "StatusId" :"5563456",
+//      "StatusName" : "1. L0 - HR - Rejected Before Interview ",
+//      "CountOfStatus" : 7
+//    } ... {}],
+//    "TotalRejected" : 45,
+//    "TotalOnProcess" : 79,
+//    "GoalToAchieve" : 2,
+//    "PercentageProgress" : "50%"
+//  },
+//    {
+//      "Id" : "23847169234",
+//      "Name": "Product Manager",
+//      "Status" : [{
+//        "StatusId" :"21341234",
+//        "StatusName" : "0. L0- HR 1st contact candidate",
+//        "CountOfStatus" : 7
+//      },{
+//        "StatusId" :"5563456",
+//        "StatusName" : "1. L0 - HR - Rejected Before Interview ",
+//        "CountOfStatus" : 7
+//      } ... {}],
+//      "TotalRejected" : 45,
+//      "TotalOnProcess" : 79,
+//      "GoalToAchieve" : 2,
+//      "PercentageProgress" : "50%"
+//    }
+//     
+//  ]
+//},
+
+{
+  "ReportType": "Rep001",
+  "ReportName": "GeneralStructure",
+        "JsonStructure":[{
+        "ReportType": { "DataType": "String", "IsRequired": True, "Description": "Key that indentify the kind of report"},
+        "Data": {"DataType": "Json", "IsRequired": True, "Description": "Data Structure for Positions", "ReportTypeSource": "Rep002"}
+}]
+},
+
+{
+  "ReportType": "Rep002",
+  "ReportName": "PositionsReport",
+  "JsonStructure":[{
+    "ReportType": { "DataType": "String", "IsRequired": True, "Description": "Key that indentify the kind of report"},
+    "ResourceName": {"DataType": "String", "IsRequired": True, "Description": "Name of the resource that is having an interview"},
+    "PositionName": {"DataType": "String", "IsRequired": True, "Description": "Name of the current available position"},
+    "CatalogStateDescription": {"DataType": "String", "IsRequired": True, "Description": "Name of the currente state that the resource is in"},
+    "ResourceId": {"DataType": "UUID", "IsRequired": True, "Description": "Id of the assigned resource"},
+    "CatalogStateId": {"DataType": "UUID", "IsRequired": True, "Description": "Id of the current state of the process"}
+  }]
+}
+
+{
+"ReportType": "Rep002",
+"Data": {
+  "ReportType": "Rep002",
+  "ResourceName": "Israel Gonzalez",
+  "PositionName": "C# Developer",
+  "CatalogStateDescription": "0. L0- HR 1st contact candidate",
+  "ResourceId": "235213534",
+  "CatalogStateId": "1672354791"
+}

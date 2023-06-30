@@ -1,0 +1,7 @@
+postgresql
+.idea
+.vs
+**/obj
+**/bin
+.dockerignore
+src/Presentation/Interview.Service.Api/Properties/launchSettings.json
